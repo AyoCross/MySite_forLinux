@@ -6,59 +6,59 @@
 <div class="col-md-8 col-md-offset-2">
     <div class="row">
         <h3>
-            Blog Meta Data &nbsp;
+            博客基本数据 &nbsp;
             {% if perms.main.change_blogmeta %}
             <small><a href="{% url 'main:admin_blog_meta' %}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </a></small>
             {% endif %}
         </h3>
         <hr>
         <dl class="dl-horizontal">
-            <dt>Blog Name:</dt>
+            <dt>博客名称:</dt>
             <dd>{{ site_info.title }}</dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Blog Subtitle:</dt>
+            <dt>子标题:</dt>
             <dd>{{ site_info.subtitle }}</dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Blog Description:</dt>
+            <dt>总体描述:</dt>
             <dd>{{ site_info.desc }}</dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Blog Owner:</dt>
+            <dt>Owner:</dt>
             <dd>{{ site_info.author }}</dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Blog Keywords:</dt>
+            <dt>Keywords:</dt>
             <dd>{{ site_info.keywords }}</dd>
         </dl>
     </div>
     <div class="row">
         <h3>
-            About User &nbsp;
+            用户描述 &nbsp;
             <small><a href="{% url 'accounts:profile' %}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </a></small>
         </h3>
         <hr>
         <dl class="dl-horizontal">
-            <dt>Username Name:</dt>
+            <dt>用户名:</dt>
             <dd>{{account_info.username}}</dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Display Name:</dt>
+            <dt>昵称:</dt>
             <dd>{{account_info.display_name}}</dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Biography:</dt>
+            <dt>个人简介:</dt>
             <dd>{{account_info.biography}}</dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Social Network:</dt>
+            <dt>社交帐号:</dt>
             <dd>
                 {% if account_info.github %}
                     <a href='{{ account_info.github }}'><i class="fa fa-github fa-lg"></i></a>
                 {% endif %}
 
-                {% if account_info.twitter %}
+                {% if account_info.zhihu %}
                     <a href='{{ account_info.twitter }}'><i class="fa fa-twitter fa-lg"></i></a>
                 {% endif %}
 
@@ -69,7 +69,7 @@
             </dd>
         </dl>
         <dl class="dl-horizontal">
-            <dt>Homepage:</dt>
+            <dt>个人主页:</dt>
             <dd>
                 {% if account_info.homepage %}
                 <a href="{{ account_info.homepage }}"><i class="fa fa-home fa-lg"></i></a> {{ account_info.homepage }}

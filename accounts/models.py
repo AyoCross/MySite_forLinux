@@ -19,7 +19,7 @@ class Account(models.Model):
     weixin = models.URLField(null=True, blank=True)
     douban = models.URLField(null=True, blank=True)
     weibo = models.URLField(null=True, blank=True)
-    twitter = models.URLField(null=True, blank=True)
+    zhihu = models.URLField(null=True, blank=True)
     github = models.URLField(null=True, blank=True)
     user = models.OneToOneField(User)
 
@@ -37,7 +37,7 @@ class SocialInfo(models.Model):
     SOCIAL_CHOICES = (
     ('fa-facebook', 'Facebook'),
     ('fa-github', 'Github'),
-    ('fa-twitter', 'Twitter'),
+    ('fa-zhihu', 'Zhihu'),
     ('fa-google-plus', 'Google Plus'),
     ('fa-weibo', 'Weibo'),)
     ('fa-bookmark', 'Other'),

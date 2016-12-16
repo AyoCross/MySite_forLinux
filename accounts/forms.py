@@ -61,7 +61,7 @@ class ProfileForm(forms.Form):
     weixin = forms.URLField(required=False)
     douban = forms.URLField(required=False)
     weibo = forms.URLField(required=False)
-    twitter = forms.URLField(required=False)
+    zhihu = forms.URLField(required=False)
     github = forms.URLField(required=False)
 
 class ChangePasswordForm(forms.Form):

@@ -85,7 +85,7 @@ def get_user_info(user):
             'homepage': user.account.homepage,
             'weixin': user.account.weixin,
             'douban': user.account.douban,
-            'twitter': user.account.twitter,
+            'zhihu': user.account.zhihu,
             'github': user.account.github,
             'weibo': user.account.weibo,
         }

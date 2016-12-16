@@ -261,7 +261,7 @@ class ProfileView(View):
             'weixin' : request.user.account.weixin,
             'douban' : request.user.account.douban,
             'weibo' : request.user.account.weibo,
-            'twitter' : request.user.account.twitter,
+            'zhihu' : request.user.account.zhihu,
             'github' : request.user.account.github
         }
 
@@ -285,7 +285,7 @@ class ProfileView(View):
             account.weixin = form.cleaned_data['weixin']
             account.douban = form.cleaned_data['douban']
             account.weibo = form.cleaned_data['weibo']
-            account.twitter = form.cleaned_data['twitter']
+            account.zhihu = form.cleaned_data['zhihu']
             account.github = form.cleaned_data['github']
 
             account.save()

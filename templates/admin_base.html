@@ -72,8 +72,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">博文 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="{% url 'main:admin_posts' %}">所有博文</a></li>
-                <li><a href="{% url 'main:admin_post' %}">New Post</a></li>
-                <li><a href="{% url 'main:admin_posts' %}?draft=true">Drafts</a></li>
+                <li><a href="{% url 'main:admin_post' %}">新建</a></li>
+                <li><a href="{% url 'main:admin_posts' %}?draft=true">草稿</a></li>
                 {% if perms.main.add_tag %}
                 <li class="divider"></li>
                 <li><a href="{% url 'main:admin_tags' %}">标签</a></li>
@@ -81,14 +81,14 @@
 
                 {% if perms.main.add_category %}
                 <li class="divider"></li>
-                <li><a href="{% url 'main:admin_category' %}">Category</a></li>
+                <li><a href="{% url 'main:admin_category' %}">分类</a></li>
                 {% endif %}
               </ul>
             </li>
             {% endif %}
             {% if perms.main.add_page %}
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pages <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">页码 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="{% url 'main:admin_pages' %}">All Pages</a></li>
                 <li><a href="{% url 'main:admin_page' %}">New Page</a></li>
@@ -98,12 +98,12 @@
             {% endif %}
             {% if perms.auth.add_user %}
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Users <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">用户 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="{% url 'accounts:users' %}">All Users</a></li>
-                <li><a href="{% url 'accounts:register' %}">New User</a></li>
+                <li><a href="{% url 'accounts:users' %}">所有用户</a></li>
+                <li><a href="{% url 'accounts:register' %}">新用户</a></li>
                 <li class="divider"></li>
-                <li><a href="{% url 'accounts:groups' %}">User Groups</a></li>
+                <li><a href="{% url 'accounts:groups' %}">用户组</a></li>
                 <!-- <li class="divider"></li>
                 <li><a href="#">Category</a></li> -->
               </ul>
@@ -117,17 +117,17 @@
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Search" name="key">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default">提交</button>
             </form>
           {% endif %}
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ request.user.username }} <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="{% url 'accounts:profile' %}">Settings</a></li>
+                <li><a href="{% url 'accounts:profile' %}">设置</a></li>
                 <!-- <li><a href="#">Another action</a></li> -->
                 <!-- <li><a href="#">Something else here</a></li> -->
                 <li class="divider"></li>
-                <li><a href="{% url 'accounts:logout' %}">Exit</a></li>
+                <li><a href="{% url 'accounts:logout' %}">推出</a></li>
               </ul>
             </li>
           </ul>
